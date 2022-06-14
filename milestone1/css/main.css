@@ -6,17 +6,27 @@
     --bs-secondary: #EAEAEA;
     --bs-secondary-rgb: 234, 234, 234;
     --my-dark-grey: #B1B1B1;
+    --my-grey: #C9C4C4;
+}
+
+.text-grey {
+    color: var(--my-grey);
 }
 
 .text-dark-grey {
     color: var(--my-dark-grey);
 }
 
-.avatar {
-    border-radius: 50%;
+.small-text {
+    font-size: 0.9rem;
 }
 
-.user-avatar {
+.avatar {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.avatar.user-avatar {
     width: 50px;
 }
 
@@ -55,18 +65,19 @@
 }
 
 .notifications-banner a {
-    font-size: 0.9rem;
+    color: #5B818C;
 }
 
 .chat-search-form {
     background-color: #FAFAFA;
 }
 
-.input-group input {
-    font-size: 0.9rem;
-}
-
 .input-group span, .input-group input {
     border-radius: 0;
     border-color: #F5F5F5;
+}
+
+.contact {
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
 }
