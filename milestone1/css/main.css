@@ -1,0 +1,72 @@
+:root{
+    --bs-body-bg: #DBDBD3;
+    --bs-body-bg-rgb: 219, 219, 211;
+    --bs-primary: #009688;
+    --bs-primary-rgb: 0, 150, 136;
+    --bs-secondary: #EAEAEA;
+    --bs-secondary-rgb: 234, 234, 234;
+    --my-dark-grey: #B1B1B1;
+}
+
+.text-dark-grey {
+    color: var(--my-dark-grey);
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.user-avatar {
+    width: 50px;
+}
+
+.bg-rectangle {
+    height: 15vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-container {
+    --main-container-margin: 32px;
+    height: calc(100vh - 2 * var(--main-container-margin));
+    margin-top: var(--main-container-margin);
+    margin-bottom: var(--main-container-margin);
+    background-color: white;
+    position: relative;
+}
+
+.notifications-banner {
+    background-color: #8EDAFC;
+}
+
+.circle-icon-background {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle-icon-background i {
+    color: #8EDAFC;
+}
+
+.notifications-banner .call-out {
+    margin-bottom: -0.4rem;
+}
+
+.notifications-banner a {
+    font-size: 0.9rem;
+}
+
+.chat-search-form {
+    background-color: #FAFAFA;
+}
+
+.input-group input {
+    font-size: 0.9rem;
+}
+
+.input-group span, .input-group input {
+    border-radius: 0;
+    border-color: #F5F5F5;
+}
