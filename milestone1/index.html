@@ -22,11 +22,11 @@
                 <div class="col row flex-column overflow-hidden h-100">
                     <!-- Barra utente -->
                     <div class="bg-secondary py-2">
-                        <div class="row justify-content-between align-items-center">
+                        <div class="row align-items-center g-1">
                             <div class="col-auto">
                                 <img class="avatar user-avatar" src="img/avatar_io.jpg" alt="Immagine utente">
-                                <span>Sofia</span>
                             </div>
+                            <div class="col">Sofia</div>
                             <div class="col-auto text-end text-dark-grey fs-4">
                                 <i class="px-2 fa-solid fa-circle-notch"></i>
                                 <i class="px-2 fa-solid fa-message"></i>
@@ -36,7 +36,7 @@
                     </div>
                     <!-- Barra di richiesta di attivazione delle notifiche desktop -->
                     <div class="notifications-banner py-3">
-                        <div class="row g-0 align-items-center">
+                        <div class="row g-1 align-items-center">
                             <div class="col-auto">
                                 <div class="px-2">
                                     <div class="circle-icon-background p-2">
@@ -44,11 +44,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col">
                                 <div class="call-out">
                                     Ricevi notifiche di nuovi messaggi
                                 </div>
-                                <a class="small-text" href="#">Attiva notifiche desktop</a>
+                                <a class="text-small text-wut" href="#">Attiva notifiche desktop</a>
                             </div>
                         </div>
                     </div>
@@ -58,26 +58,72 @@
                             <span class="input-group-text bg-white text-dark-grey px-4">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" class="form-control small-text" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca nelle chat">
+                            <input type="text" class="form-control text-small" placeholder="Cerca o inizia una nuova chat" aria-label="Cerca nelle chat">
                         </div>
                     </div>
                     <!-- Lista delle chat -->
                     <div class="col overflow-auto">
-                        <div v-for="contatto in contatti">
-                            <div class="row contact py-2">
+                        <div v-for="(contatto, i) in contatti">
+                            <div class="row contact py-2" :class="i === activeUserIndex ? `bg-secondary` : ``">
                                 <div class="col-auto">
                                     <img class="avatar" :src="`img/avatar` + contatto.avatar + `.jpg`" :alt="`Immagine di ` + contatto.name">
                                 </div>
-                                <div class="col-auto">
+                                <div class="col">
                                     <div>{{contatto.name}}</div>
-                                    <div class="small-text text-grey">{{contatto.messages[contatto.messages.length - 1].message}}</div>
+                                    <div class="text-small text-grey">{{contatto.messages[contatto.messages.length - 1].message}}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Chat -->
-                <div class="col-8"></div>
+                <div class="col-8 row flex-column overflow-hidden h-100">
+                    <!-- Barra interlocutore -->
+                    <div class="bg-secondary py-2">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-auto">
+                                <img class="avatar user-avatar" src="img/avatar_1.jpg" alt="Immagine di Michele">
+
+                            </div>
+                            <div class="col">
+                                <span>Michele</span>
+                                <div class="text-small text-wut">Ultimo accesso oggi alle 12:00</div>
+                            </div>
+                            <div class="col-auto text-end text-dark-grey fs-4">
+                                <i class="px-2 fa-solid fa-magnifying-glass"></i>
+                                <i class="px-2 fa-solid fa-paperclip"></i>
+                                <i class="px-2 fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenuto principale con i messaggi -->
+                    <div class="main-chat-container col overflow-auto">
+                        <div class="p-5">
+                            <div v-for="message in contatti[activeUserIndex].messages" class="message-container px-3 py-2 mb-2" :class="message.status === `sent` ? `sent-message` : `received-message`">
+                                <div>
+                                    {{message.message}}
+                                </div>
+                                <div class="text-end text-dark-grey text-mini">
+                                    {{message.date}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Barra per l'invio dei messaggi -->
+                    <div class="bg-secondary py-2">
+                        <div class="row align-items-center">
+                            <div class="col-auto fs-4 text-center">
+                                <i class="fa-regular fa-face-smile px-4"></i>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control w-100 text-small" placeholder="Scrivi un messaggio" aria-label="Scrivi un messaggio">
+                            </div>
+                            <div class="col-auto fs-4 text-center">
+                                <i class="fa-solid fa-microphone px-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

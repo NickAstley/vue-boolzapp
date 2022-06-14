@@ -172,6 +172,7 @@ const contatti = [
   const appVue = new Vue({
     el : "#app",
     data : {
-        contatti : contatti
+        contatti : contatti,
+        activeUserIndex : 0
     }
   });

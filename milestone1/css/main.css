@@ -7,6 +7,8 @@
     --bs-secondary-rgb: 234, 234, 234;
     --my-dark-grey: #B1B1B1;
     --my-grey: #C9C4C4;
+    --my-wut-color: #5B818C;
+    --my-messages-green: #D5F9BA;
 }
 
 .text-grey {
@@ -17,8 +19,16 @@
     color: var(--my-dark-grey);
 }
 
-.small-text {
+.text-wut {
+    color: var(--my-wut-color)
+}
+
+.text-small {
     font-size: 0.9rem;
+}
+
+.text-mini {
+    font-size: 0.7rem;
 }
 
 .avatar {
@@ -64,10 +74,6 @@
     margin-bottom: -0.4rem;
 }
 
-.notifications-banner a {
-    color: #5B818C;
-}
-
 .chat-search-form {
     background-color: #FAFAFA;
 }
@@ -80,4 +86,23 @@
 .contact {
     border-bottom: 1px solid #F5F5F5;
     cursor: pointer;
+}
+
+.main-chat-container {
+    background-image: url("../img/mine.jpg");
+}
+
+.message-container {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.sent-message {
+    background-color: var(--my-messages-green);
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.received-message {
+    background-color: white;
 }
