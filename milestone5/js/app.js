@@ -25,6 +25,13 @@ contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 “mar” rimangono solo Marco e Martina)
 */
 
+/*
+Milestone 5
+- Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
+permette di cancellare il messaggio selezionato
+- Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
+*/
+
 const contatti = [
     {
       name: "Michele",
@@ -195,7 +202,8 @@ const contatti = [
         contatti : contatti,
         currentContact : contatti[0],
         message : "",
-        searched : ""
+        searched : "",
+        showMenu : false
     },
     methods : {
       getFormattedTime(date) {
@@ -239,6 +247,9 @@ const contatti = [
       },
       filterContacts(contatto) {
         return contatto.name.includes(this.searched.trim(" "));
+      },
+      messageClicked() {
+        this.showMenu = true;
       }
     }
   });

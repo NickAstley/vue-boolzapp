@@ -1,0 +1,149 @@
+:root{
+    --bs-body-bg: #DBDBD3;
+    --bs-body-bg-rgb: 219, 219, 211;
+    --bs-primary: #009688;
+    --bs-primary-rgb: 0, 150, 136;
+    --bs-secondary: #EAEAEA;
+    --bs-secondary-rgb: 234, 234, 234;
+    --my-grey: #C9C4C4;
+    --my-light-grey: #FAFAFA;
+    --my-dark-grey: #B1B1B1;
+    --my-celeste: #8EDAFC;
+    --my-wut-color: #5B818C;
+    --my-messages-green: #D5F9BA;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--bs-primary);
+}
+
+/* Utilities */
+
+/* Colori testo */
+.text-grey {
+    color: var(--my-grey);
+}
+
+.text-dark-grey {
+    color: var(--my-dark-grey);
+}
+
+.text-celeste {
+    color: var(--my-celeste);
+}
+
+.text-wut {
+    color: var(--my-wut-color)
+}
+
+/* Colori background */
+.bg-light-grey {
+    background-color: var(--my-light-grey);
+}
+
+.bg-celeste {
+    background-color: var(--my-celeste);
+}
+
+/* Dimensioni testo */
+.text-small {
+    font-size: 0.9rem;
+}
+
+.text-mini {
+    font-size: 0.7rem;
+}
+
+/* Dimensioni immagini utente */
+.avatar {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.avatar.user-avatar {
+    width: 50px;
+}
+
+/* Stili */
+.bg-rectangle {
+    height: 15vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-container {
+    --main-container-margin: 32px;
+    height: calc(100vh - 2 * var(--main-container-margin));
+    margin-top: var(--main-container-margin);
+    margin-bottom: var(--main-container-margin);
+    background-color: white;
+    position: relative;
+}
+
+.circle-icon-bg {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.my-input-group span, .my-input-group input {
+    border-radius: 0;
+    border-color: #F5F5F5;
+}
+
+.contact {
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-last-message-date {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    text-align: right;
+}
+
+.main-chat-container {
+    background-image: url("../img/mine.jpg");
+}
+
+.message-container {
+    width: 40%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sent-message {
+    background-color: var(--my-messages-green);
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.received-message {
+    background-color: white;
+}
+
+.message-menu-container {
+    position: absolute;
+    top:0.4rem;
+    right: 0.4rem;
+}
+
+.message-menu-arrow {
+    display: none;
+    text-align: right;
+}
+
+.message-menu {
+    background-color: white;
+}
+
+.message-container:hover .message-menu-arrow {
+    display: block;
+}

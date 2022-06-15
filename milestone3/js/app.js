@@ -224,8 +224,9 @@ const contatti = [
       },
       automaticReply() {
         const self = this;
+        const contattoCorrente = this.currentContact;
         setTimeout(function() {
-          self.currentContact.messages.push(self.generateMessage("ok", "received"));
+          contattoCorrente.messages.push(self.generateMessage("ok", "received"));
         }, 1000);  
       }
     }
