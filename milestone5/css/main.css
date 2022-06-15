@@ -142,6 +142,7 @@ a:hover {
 
 .message-menu {
     background-color: white;
+    display: none;
 }
 
 .message-container:hover .message-menu-arrow {

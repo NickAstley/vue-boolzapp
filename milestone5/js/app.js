@@ -202,8 +202,7 @@ const contatti = [
         contatti : contatti,
         currentContact : contatti[0],
         message : "",
-        searched : "",
-        showMenu : false
+        searched : ""
     },
     methods : {
       getFormattedTime(date) {
@@ -246,10 +245,10 @@ const contatti = [
         }, 1000);  
       },
       filterContacts(contatto) {
-        return contatto.name.includes(this.searched.trim(" "));
+        return contatto.name.toLowerCase().includes(this.searched.trim(" ").toLowerCase());
       },
-      messageClicked() {
-        this.showMenu = true;
+      openMessageMenu() {
+
       }
     }
   });

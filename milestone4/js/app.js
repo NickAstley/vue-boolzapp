@@ -238,7 +238,7 @@ const contatti = [
         }, 1000);  
       },
       filterContacts(contatto) {
-        return contatto.name.includes(this.searched.trim(" "));
+        return contatto.name.toLowerCase().includes(this.searched.trim(" ").toLowerCase());
       }
     }
   });

@@ -138,7 +138,7 @@
                         <!-- Contenuto principale con i messaggi -->
                         <div class="main-chat-container col overflow-auto">
                             <div class="p-5">
-                                <div v-for="message in currentContact.messages" class="message-container px-3 py-2 mb-2" :class="message.status === `sent` ? `sent-message` : `received-message`" @click="messageClicked()">
+                                <div v-for="message in currentContact.messages" class="message-container px-3 py-2 mb-2" :class="message.status === `sent` ? `sent-message` : `received-message`" @click="openMessageMenu()">
                                     <!-- Contenuto di un singolo messaggio -->
                                     <div>
                                         {{message.message}}
@@ -153,7 +153,7 @@
                                             <i class="fa-solid fa-angle-down"></i>
                                         </div>
                                         <!-- Menu a tendina -->
-                                        <div v-if="showMenu" class="message-menu">
+                                        <div class="message-menu">
                                             <div class="p-3">Message info</div>
                                             <div class="p-3">Delete message</div>
                                         </div>
