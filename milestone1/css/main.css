@@ -5,12 +5,25 @@
     --bs-primary-rgb: 0, 150, 136;
     --bs-secondary: #EAEAEA;
     --bs-secondary-rgb: 234, 234, 234;
-    --my-dark-grey: #B1B1B1;
     --my-grey: #C9C4C4;
+    --my-light-grey: #FAFAFA;
+    --my-dark-grey: #B1B1B1;
+    --my-celeste: #8EDAFC;
     --my-wut-color: #5B818C;
     --my-messages-green: #D5F9BA;
 }
 
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: var(--bs-primary);
+}
+
+/* Utilities */
+
+/* Colori testo */
 .text-grey {
     color: var(--my-grey);
 }
@@ -19,10 +32,24 @@
     color: var(--my-dark-grey);
 }
 
+.text-celeste {
+    color: var(--my-celeste);
+}
+
 .text-wut {
     color: var(--my-wut-color)
 }
 
+/* Colori background */
+.bg-light-grey {
+    background-color: var(--my-light-grey);
+}
+
+.bg-celeste {
+    background-color: var(--my-celeste);
+}
+
+/* Dimensioni testo */
 .text-small {
     font-size: 0.9rem;
 }
@@ -31,6 +58,7 @@
     font-size: 0.7rem;
 }
 
+/* Dimensioni immagini utente */
 .avatar {
     border-radius: 50%;
     width: 60px;
@@ -40,6 +68,7 @@
     width: 50px;
 }
 
+/* Stili */
 .bg-rectangle {
     height: 15vh;
     position: absolute;
@@ -57,28 +86,12 @@
     position: relative;
 }
 
-.notifications-banner {
-    background-color: #8EDAFC;
-}
-
-.circle-icon-background {
+.circle-icon-bg {
     background-color: white;
     border-radius: 50%;
 }
 
-.circle-icon-background i {
-    color: #8EDAFC;
-}
-
-.notifications-banner .call-out {
-    margin-bottom: -0.4rem;
-}
-
-.chat-search-form {
-    background-color: #FAFAFA;
-}
-
-.input-group span, .input-group input {
+.my-input-group span, .my-input-group input {
     border-radius: 0;
     border-color: #F5F5F5;
 }
@@ -86,6 +99,14 @@
 .contact {
     border-bottom: 1px solid #F5F5F5;
     cursor: pointer;
+    position: relative;
+}
+
+.contact-last-message-date {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    text-align: right;
 }
 
 .main-chat-container {

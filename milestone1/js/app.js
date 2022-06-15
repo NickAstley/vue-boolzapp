@@ -173,6 +173,6 @@ const contatti = [
     el : "#app",
     data : {
         contatti : contatti,
-        activeUserIndex : 0
+        currentContact : contatti[0]
     }
   });
