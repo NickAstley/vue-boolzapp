@@ -239,7 +239,7 @@ const contatti = [
       },
       deleteMessage(messageToDelete) {
         this.currentContact.messages = this.currentContact.messages.filter(message =>{
-          return message.date !== messageToDelete.date;
+          return !(message.date === messageToDelete.date && message.message === messageToDelete.message && message.status === messageToDelete.status);
         });
       }
     }
