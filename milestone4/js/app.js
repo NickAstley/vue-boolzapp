@@ -237,8 +237,10 @@ const contatti = [
           contattoCorrente.messages.push(self.generateMessage("ok", "received"));
         }, 1000);  
       },
-      filterContacts(contatto) {
-        return contatto.name.toLowerCase().includes(this.searched.trim(" ").toLowerCase());
-      }
+      filterContacts() {
+        return contatti.filter((contatto) => {
+          return contatto.name.toLowerCase().includes(this.searched.trim(" ").toLowerCase());
+        });
+      },
     }
   });
