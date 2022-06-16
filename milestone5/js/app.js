@@ -237,5 +237,10 @@ const contatti = [
           return contatto.name.toLowerCase().includes(this.searched.trim(" ").toLowerCase());
         });
       },
+      deleteMessage(messageToDelete) {
+        this.currentContact.messages = this.currentContact.messages.filter(message =>{
+          return message.date !== messageToDelete.date;
+        });
+      }
     }
   });
