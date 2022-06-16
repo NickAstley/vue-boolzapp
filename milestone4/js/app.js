@@ -205,21 +205,9 @@ const contatti = [
       setCurrentContact(contatto) {
         this.currentContact = contatto;
       },
-      getDate() {
-        const day = dayjs().get('date');
-        let month = dayjs().get('month') + 1;
-        if (month < 10) {
-          month = "0" + month;
-        }
-        const year = dayjs().get('year');
-        const hour = dayjs().get('hour');
-        const minute = dayjs().get('minute');
-        const second = dayjs().get('second');
-        return day + "/" + month + "/" + year + " " + hour + ":" + minute + ":" + second;
-      },
       generateMessage(text, status) {
         const newMessage = {
-          date: this.getDate(),
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           message: text,
           status: status
         };

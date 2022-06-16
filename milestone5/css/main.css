@@ -129,22 +129,21 @@ a:hover {
     background-color: white;
 }
 
-.message-menu-container {
+.message-menu-arrow {
+    display: none;
+    text-align: right;
     position: absolute;
     top:0.4rem;
     right: 0.4rem;
 }
 
-.message-menu-arrow {
-    display: none;
-    text-align: right;
-}
-
-.message-menu {
-    background-color: white;
-    display: none;
-}
-
 .message-container:hover .message-menu-arrow {
     display: block;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    position: absolute;
+    top:0.4rem;
+    right: 0.4rem;
 }
