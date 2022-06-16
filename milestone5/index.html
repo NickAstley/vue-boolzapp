@@ -93,10 +93,10 @@
                                         <!-- Nome contatto -->
                                         <div>{{contatto.name}}</div>
                                         <!-- Ultimo messaggio -->
-                                        <div class="text-small text-grey">{{contatto.messages[contatto.messages.length - 1].message}}</div>
+                                        <div class="text-small text-grey" v-if="contatto.messages.length">{{contatto.messages[contatto.messages.length - 1].message}}</div>
                                     </div>
                                     <!-- Ora ultimo messaggio -->
-                                    <div class="contact-last-message-date text-dark-grey text-mini">
+                                    <div class="contact-last-message-date text-dark-grey text-mini" v-if="contatto.messages.length">
                                         {{getFormattedTime(contatto.messages[contatto.messages.length - 1].date)}}
                                     </div>
                                 </div>
