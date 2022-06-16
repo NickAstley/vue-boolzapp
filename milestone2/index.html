@@ -79,7 +79,7 @@
                         </div>
                         <!-- Lista delle chat -->
                         <div class="col overflow-auto">
-                            <div v-for="contatto in contatti" class="contact py-2" :class="contatto.name === currentContact.name ? `bg-secondary` : ``" @click="setCurrentContact(contatto)">
+                            <div v-for="contatto in contatti" class="contact py-2" :class="contatto.avatar === currentContact.avatar ? `bg-secondary` : ``" @click="setCurrentContact(contatto)">
                                 <!-- Div chat contatto -->
                                 <div class="row g-0">
                                     <!-- Immagine contatto -->
